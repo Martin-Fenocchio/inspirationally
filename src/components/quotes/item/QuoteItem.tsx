@@ -11,7 +11,7 @@ function QuoteItem({ quote }: { quote: IQuote }) {
           className="text-2xl text-center font-mono "
           speed={70}
           key={quote.id}
-          sequence={[`“${quote.phrase}” ${quote.phrase} ${quote.phrase}`]}
+          sequence={[`“${quote.phrase}”`]}
         ></TypeAnimation>
         <footer className="italic text-right mt-[16px] text-xl">
           - {quote?.character}
@@ -26,6 +26,7 @@ function QuoteItem({ quote }: { quote: IQuote }) {
         height={0}
         sizes="100vw"
         style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
+        priority
       />
 
       <Image
